@@ -7,6 +7,6 @@
 
 ####   :fa-check: 食用方法
 克隆本仓库
-`git clone --depth=1 https://gitee.com/herijian/characterpic.git`
+`git clone https://gitee.com/herijian/characterpic.git`
 
 把normal-character文件夹放到`miao-plugin/resources/profile`目录下就行了
