@@ -1,6 +1,6 @@
 # 优质 喵喵插件原神星铁角色面板图
 
-啥都聊的交流群[966160338](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=ooET5VU1fRhyRsq4WmcWYetZaiOKH-hm&authKey=vRZfeviXtVT5yHD7OH6SMnXp5LVUP2AByhCA17EFrg6I7oE6oITkINxpUMi4Zk%2Fc&noverify=0&group_code=966160338)
+啥都聊的交流群[768216689](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=PQAshGBsq9gi1PPGrsCkHdz47Pj1zhm2&authKey=qcuZzat49QZoHvN%2FNFMp5XaDRK4l2Ngo7lz%2B9USyqEnMpLFZH4CyqqHId6mv9ZwG&noverify=0&group_code=768216689)
 
 ###  面板图持续更新！
 
