@@ -11,6 +11,12 @@
 图片来源各处，精选图片，有别的图库的进行了挑选，大部分本人各处搜集
 
 ####   :fa-check: 食用方法
+
+##方便更新
+在`Yunzai/plugins/miao-plugin/resources/profile`目录下克隆本仓库`git clone https://gitee.com/herijian/characterpic.git`
+更新时进入该目录git pull即可
+
+##手动方法（不方便更新）
 克隆本仓库
 `git clone https://gitee.com/herijian/characterpic.git`
 
