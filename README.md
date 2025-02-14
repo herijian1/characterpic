@@ -16,6 +16,8 @@
 
 在`Yunzai/plugins/miao-plugin/resources/profile`目录下克隆本仓库`git clone https://gitee.com/herijian/characterpic.git`
 更新时进入该目录git pull即可
+注：如果是linux系统，有trss插件可以直接使用rc指令安装，对机器人发送 rc rm -r plugins/miao-plugin/resources/profile/normal-character && cd plugins/miao-plugin/resources/profile && git clone https://gitee.com/herijian/characterpic.git
+更新时对机器人发送rc cd plugins/miao-plugin/resources/profile && git pull即可
 
  **手动方法（不方便更新）** 
 
