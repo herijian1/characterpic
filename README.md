@@ -1,13 +1,19 @@
-# 优质 喵喵插件原神星铁角色面板图
+
+
+
+
+# <div align="center">何日见 原铁面板图</div>
+
+<p align="center">
+  </a>
+    <img width = "150" src="mascot.jpeg">
+  </a>
+</p>
+
 
 啥都聊的交流群[768216689](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=PQAshGBsq9gi1PPGrsCkHdz47Pj1zhm2&authKey=qcuZzat49QZoHvN%2FNFMp5XaDRK4l2Ngo7lz%2B9USyqEnMpLFZH4CyqqHId6mv9ZwG&noverify=0&group_code=768216689)
 
 ###  面板图持续更新！
-
-[![Stars](https://img.shields.io/github/stars/lengxi-root/air-plugin?color=yellow&label=收藏)](../../stargazers)  
-[![访问量](https://moe-counter.glitch.me/get/@lengxi-root-air-plugin?theme=rule34)](https://gitee.com/herijian/characterpic)
-
-</div>
 
 
 ###  :satisfied: 介绍
