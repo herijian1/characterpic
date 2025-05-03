@@ -5,12 +5,12 @@
 ###  面板图持续更新！
 
 [![Stars](https://img.shields.io/github/stars/lengxi-root/air-plugin?color=yellow&label=收藏)](../../stargazers)  
-[![访问量](https://moe-counter.glitch.me/get/@lengxi-root-air-plugin?theme=rule34)](https://github.com/lengxi-root/air-plugin)
+[![访问量](https://moe-counter.glitch.me/get/@lengxi-root-air-plugin?theme=rule34)](https://gitee.com/herijian/characterpic)
 
 </div>
 
 
-####  :satisfied: 介绍
+###  :satisfied: 介绍
 喵喵插件原神星铁优质面板图
 
 图片来源各处，精选图片，有别的图库的进行了挑选，大部分本人各处搜集
@@ -32,7 +32,7 @@ git clone https://gitee.com/herijian/characterpic.git ./plugins/miao-plugin/reso
 
  **手动方法（不方便更新）** 
 
-克隆本仓库
+随便找个地方克隆本仓库 或 直接下载压缩包
 ```
 git clone https://gitee.com/herijian/characterpic.git
 ```
