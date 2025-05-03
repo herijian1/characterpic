@@ -4,13 +4,18 @@
 
 ###  面板图持续更新！
 
-![茶娘](mmexport1723983455820.jpeg)
+[![Stars](https://img.shields.io/github/stars/lengxi-root/air-plugin?color=yellow&label=收藏)](../../stargazers)  
+[![访问量](https://moe-counter.glitch.me/get/@lengxi-root-air-plugin?theme=rule34)](https://github.com/lengxi-root/air-plugin)
+
+</div>
+
+
 ####  :satisfied: 介绍
 喵喵插件原神星铁优质面板图
 
 图片来源各处，精选图片，有别的图库的进行了挑选，大部分本人各处搜集
 
-####   :fa-check: 食用方法
+###   :fa-check: 食用方法
 
  **方便更新** 
 
