@@ -1,4 +1,5 @@
 import { exec } from 'child_process'
+import { promisify } from 'util'
 import path from 'path'
 
 const profilePath = path.resolve(process.cwd(), 'plugins/miao-plugin/resources/profile')
@@ -39,46 +40,44 @@ export class updateProfile extends plugin {
 
   // 执行Git命令并处理结果
   async executeGitCommand(e, command, actionName, isForce = false) {
-    return new Promise((resolve) => {
-      console.log(`[面板图更新] 执行命令: ${command}`)
+    console.log(`[面板图更新] 执行命令: ${command}`)
 
-      exec(command, { cwd: profilePath }, (error, stdout, stderr) => {
-        const output = stdout + stderr
-        console.log(`[面板图更新] 命令输出:\n${output}`)
+    try {
+      const { stdout, stderr } = await execPromise(command, { cwd: profilePath })
+      const output = stdout + stderr
+      console.log(`[面板图更新] 命令输出:\n${output}`)
 
-        const isUpToDate = /Already up to date|已经是最新的|Already up-to-date|up to date/i.test(output)
+      const isUpToDate = /Already up to date|已经是最新的|Already up-to-date|up to date/i.test(output)
 
-        //文件变动数量
-        const filesChanged = output.match(/(\d+) files? changed/) || [0]
-        const changedCount = parseInt(filesChanged[1]) || 0
+      //文件变动数量
+      const filesChanged = output.match(/(\d+) files? changed/) || [0]
+      const changedCount = parseInt(filesChanged[1]) || 0
 
-        if (error) {
-          const errorCode = `ERR_${error.code || 'GIT_FAILED'}`
-          const errorMsg = `${actionName}失败！\nError: ${errorCode}\n详情: ${error.message || stderr || '未知错误'}\n可以尝试执行#强制更新面板图库`
+      // 结果处理
+      let resultMsg
+      if (isUpToDate) {
+        resultMsg = '图库已是最新，无需再次更新！'
+        console.log('[面板图更新] 图库已是最新状态')
+      } else if (changedCount > 0) {
+        resultMsg = `${isForce ? '强制更新' : '更新'}成功，共更新了${changedCount}张图片！`
+        console.log(`[面板图更新] 共${changedCount}个文件改动`)
+      } else {
+        resultMsg = `${isForce ? '强制更新' : '图库更新'}成功，无图片被更新，具体可通过#面板图更新日志 查看！`
+        console.log('[面板图更新] 未检测到文件改动')
+      }
 
-          console.log(`[面板图更新] Error: ${errorMsg}`)
-          e.reply(errorMsg)
-          return resolve(false)
-        }
-        
-        // 结果处理
-        let resultMsg
-        if (isUpToDate) {
-          resultMsg = '图库已是最新，无需再次更新！'
-          console.log('[面板图更新] 图库已是最新状态')
-        } else if (changedCount > 0) {
-          resultMsg = `${isForce ? '强制更新' : '更新'}成功，共更新了${changedCount}张图片！`
-          console.log(`[面板图更新] 共${changedCount}个文件改动`)
-        } else {
-          resultMsg = `${isForce ? '强制更新' : '图库更新'}成功，无图片被更新，具体可通过#面板图更新日志 查看！`
-          console.log('[面板图更新] 未检测到文件改动')
-        }
-        
-        e.reply(resultMsg)
-        console.log(`[面板图更新] 操作完成: ${resultMsg}`)
-        resolve(true)
-      })
-    })
+      e.reply(resultMsg)
+      console.log(`[面板图更新] 操作完成: ${resultMsg}`)
+      return true
+    } catch (error) {
+      const stderr = error.stderr || ''
+      const errorCode = `ERR_${error.code || 'GIT_FAILED'}`
+      const errorMsg = `${actionName}失败！\nError: ${errorCode}\n详情: ${error.message || stderr || '未知错误'}\n可以尝试执行#强制更新面板图库`
+
+      console.log(`[面板图更新] Error: ${errorMsg}`)
+      e.reply(errorMsg)
+      return false
+    }
   }
 
   async getLog() {
