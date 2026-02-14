@@ -1,7 +1,6 @@
 import { exec } from 'child_process'
 import path from 'path'
 
-// 获取绝对路径
 const profilePath = path.resolve(process.cwd(), 'plugins/miao-plugin/resources/profile')
 
 export class updateProfile extends plugin {
