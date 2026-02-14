@@ -31,7 +31,7 @@ export class updateProfile extends plugin {
   async checkMaster(e) {
     if (!e.isMaster) {
       console.log(`[面板图更新] 无权限用户 ${e.user_id} 尝试执行命令`)
-      e.reply('⚠去你丫的，什么人啊命令我')
+      e.reply('⚠去你丫的，什么人啊命令我！')
       return false
     }
     console.log(`[面板图更新] 主人 ${e.user_id} 执行命令: ${e.msg}`)
@@ -41,25 +41,23 @@ export class updateProfile extends plugin {
   // 执行Git命令并处理结果
   async executeGitCommand(e, command, actionName, isForce = false) {
     return new Promise((resolve) => {
-      console.log(`[面板图更新] 执行命令: ${command} (目录: ${profilePath})`)
-      
+      console.log(`[面板图更新] 执行命令: ${command}`)
+
       exec(command, { cwd: profilePath }, (error, stdout, stderr) => {
         const output = stdout + stderr
         console.log(`[面板图更新] 命令输出:\n${output}`)
-        
-        // 检测是否为最新状态
+
         const isUpToDate = /Already up to date|已经是最新的|Already up-to-date|up to date/i.test(output)
-        
-        // 解析文件改动数量
+
+        //文件变动数量
         const filesChanged = output.match(/(\d+) files? changed/) || [0]
         const changedCount = parseInt(filesChanged[1]) || 0
-        
-        // 错误处理
+
         if (error) {
           const errorCode = `ERR_${error.code || 'GIT_FAILED'}`
           const errorMsg = `${actionName}失败！\nError: ${errorCode}\n详情: ${error.message || stderr || '未知错误'}\n可以尝试执行#强制更新面板图库`
-          
-          console.log(`[面板图更新] 命令执行失败: ${errorMsg}`)
+
+          console.log(`[面板图更新] Error: ${errorMsg}`)
           e.reply(errorMsg)
           return resolve(false)
         }
@@ -70,10 +68,10 @@ export class updateProfile extends plugin {
           resultMsg = '图库已是最新，无需再次更新！'
           console.log('[面板图更新] 图库已是最新状态')
         } else if (changedCount > 0) {
-          resultMsg = `${isForce ? '强制更新' : '更新'}成功！共更新了${changedCount}张图片`
+          resultMsg = `${isForce ? '强制更新' : '更新'}成功，共更新了${changedCount}张图片！`
           console.log(`[面板图更新] 共${changedCount}个文件改动`)
         } else {
-          resultMsg = `${isForce ? '强制更新' : '更新'}成功！没有图片被更新`
+          resultMsg = `${isForce ? '强制更新' : '图库更新'}成功，无图片被更新，具体可通过#面板图更新日志 查看！`
           console.log('[面板图更新] 未检测到文件改动')
         }
         
@@ -88,10 +86,10 @@ export class updateProfile extends plugin {
     return new Promise((resolve) => {
       const cmd = 'git log -100 --pretty="%h||[%cd] %s" --date=format:"%F %T"'
       exec(cmd, { cwd: profilePath }, (error, stdout) => {
-        if (error) return resolve(`面板图库日志查询失败：${error.message}`)
+        if (error) return resolve(`面板图库更新日志查询失败！\nError：${error.message}`)
         
         const logAll = stdout.split("\n").filter(str => str.trim())
-        if (!logAll.length) return resolve("面板图库暂无更新日志")
+        if (!logAll.length) return resolve("面板图库暂无更新日志！")
         
         let log = []
         for (let str of logAll) {
