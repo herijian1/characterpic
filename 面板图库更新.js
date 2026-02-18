@@ -2,6 +2,7 @@ import { exec } from 'child_process'
 import { promisify } from 'util'
 import path from 'path'
 
+const execPromise = promisify(exec);
 const profilePath = path.resolve(process.cwd(), 'plugins/miao-plugin/resources/profile')
 
 export class updateProfile extends plugin {
