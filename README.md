@@ -16,7 +16,7 @@
 
 ### 图库说明
 
-**本仓库仅为介绍说明，图片的存储库为[图库](https://gitee.com/herijian/characterpic1)**
+**本仓库仅为介绍说明，图片的存储库为[图库](https://github.com/herijian1/characterpic1)**
 
 啬图有小部分
 
@@ -28,10 +28,6 @@
 
 在yunzai根目录下执行以下任一命令
 
-使用gitee
-```
-git clone https://gitee.com/herijian/characterpic1.git ./plugins/miao-plugin/resources/profile/
-```
 
 使用github
 
@@ -39,7 +35,12 @@ git clone https://gitee.com/herijian/characterpic1.git ./plugins/miao-plugin/res
 git clone https://github.com/herijian1/characterpic1.git ./plugins/miao-plugin/resources/profile/
 ```
 
-使用gitcode
+使用gitee
+```
+git clone https://gitee.com/herijian/characterpic1.git ./plugins/miao-plugin/resources/profile/
+```
+
+使用gitcode（更新慢）
 
 ```
 git clone https://gitcode.com/herijian/characterpic1.git ./plugins/miao-plugin/resources/profile/
