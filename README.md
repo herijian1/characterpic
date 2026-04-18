@@ -1,6 +1,6 @@
 <h1>何日见原铁面板图主仓库</h1>
 
-> 原仓库存储上限了，搞了一大堆不必要的，故对本仓库进行了整理，存储面板图的仓库更改为[面板图存储库](https://gitee.com/herijian/characterpic1)，因仓库地址改变，需要重新克隆存储仓库，而不是本仓库
+> 原仓库存储上限了，搞了一大堆不必要的，故对本仓库进行了整理，存储面板图的仓库更改为[面板图存储库](https://github.com/herijian1/characterpic1)，因仓库地址改变，需要重新克隆存储仓库，而不是本仓库
 
 啥都聊的交流群[768216689](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=PQAshGBsq9gi1PPGrsCkHdz47Pj1zhm2&authKey=qcuZzat49QZoHvN%2FNFMp5XaDRK4l2Ngo7lz%2B9USyqEnMpLFZH4CyqqHId6mv9ZwG&noverify=0&group_code=768216689)
 
