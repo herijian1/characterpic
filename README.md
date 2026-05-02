@@ -63,7 +63,7 @@ git clone https://gitcode.com/herijian/characterpic1.git ./plugins/miao-plugin/r
 ```
 curl -o "./plugins/example/面板图库更新.js" "https://gitee.com/herijian/characterpic/raw/master/面板图库更新.js"
 ```
-发送#更新面板图库
+发送#更新面板图库 即可更新，每天凌晨3-4点随机时间进行自动更新
 > Tip：如果未安装面板图库无法使用，请确保已克隆面板图仓库
 
 **方法4**
