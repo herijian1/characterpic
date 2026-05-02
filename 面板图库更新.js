@@ -27,6 +27,37 @@ export class updateProfile extends plugin {
         }
       ]
     })
+
+    this._path = process.cwd().replace(/\\/g, '/')
+    this.task = {
+      cron: '0 0 3-4 * * *', // 凌晨3-4点随机执行
+      name: '面板图库自动更新，凌晨3-4点随机执行',
+      fnc: () => this.updateTask()
+    }
+  }
+
+  async updateTask() {
+    logger.info('[面板图库自动更新] 开始执行定时更新')
+    setTimeout(async () => {
+      try {
+        const { stdout, stderr } = await execPromise('git pull', { cwd: profilePath })
+        const output = stdout + stderr
+
+        const isUpToDate = /Already up to date|已经是最新的|Already up-to-date|up to date/i.test(output)
+        const filesChanged = output.match(/(\d+) files? changed/) || [0]
+        const changedCount = parseInt(filesChanged[1]) || 0
+
+        if (!isUpToDate && changedCount > 0) {
+          logger.info(`[面板图库自动更新] 更新成功，此次更新了${changedCount}张图片~`)
+        } else if (isUpToDate) {
+          logger.info('[面板图库自动更新] 图库已是最新，无需更新')
+        } else {
+          logger.info('[面板图库自动更新] 执行完成，无文件改动')
+        }
+      } catch (error) {
+        logger.error('[面板图库自动更新] 更新失败', error)
+      }
+    }, Math.floor(Math.random() * 3600000 + 1))
   }
 
   async checkMaster(e) {
@@ -39,7 +70,6 @@ export class updateProfile extends plugin {
     return true
   }
 
-  // 执行Git命令并处理结果
   async executeGitCommand(e, command, actionName, isForce = false) {
     console.log(`[面板图更新] 执行命令: ${command}`)
 
@@ -50,11 +80,9 @@ export class updateProfile extends plugin {
 
       const isUpToDate = /Already up to date|已经是最新的|Already up-to-date|up to date/i.test(output)
 
-      //文件变动数量
       const filesChanged = output.match(/(\d+) files? changed/) || [0]
       const changedCount = parseInt(filesChanged[1]) || 0
 
-      // 结果处理
       let resultMsg
       if (isUpToDate) {
         resultMsg = '图库已是最新，无需再次更新！'
@@ -125,7 +153,6 @@ export class updateProfile extends plugin {
     await e.reply(log)
   }
 
-  // 更新
   async updateProfile(e) {
     if (!(await this.checkMaster(e))) return
     
@@ -134,7 +161,6 @@ export class updateProfile extends plugin {
     await this.executeGitCommand(e, 'git pull', '图库更新')
   }
 
-  // 强制更新
   async forceUpdateProfile(e) {
     if (!(await this.checkMaster(e))) return
     
