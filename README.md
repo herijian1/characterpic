@@ -14,8 +14,6 @@
 
 </div>
 
-![访客数](https://count.getloli.com/get/@characterpic)
-
 ### 图库说明
 
 **本仓库仅为介绍说明，图片的存储库为[图库](https://github.com/herijian1/characterpic1)**
