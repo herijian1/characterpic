@@ -5,7 +5,7 @@
 啥都聊的交流群[768216689](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=PQAshGBsq9gi1PPGrsCkHdz47Pj1zhm2&authKey=qcuZzat49QZoHvN%2FNFMp5XaDRK4l2Ngo7lz%2B9USyqEnMpLFZH4CyqqHId6mv9ZwG&noverify=0&group_code=768216689)
 
 <div align="center">
-  <img src="mascot.jpg" alt="mascot" width = "400">
+  <img src="mascot.jpg" alt="mascot" width = "180">
   </a><br>
 
 <h1>喵喵插件miao-plugin</h1>
@@ -13,6 +13,8 @@
 [![插件库](https://img.shields.io/badge/Gitee-插件库-black?style=flat-square&logo=gitee)](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index) [![Mioao-Yunzai](https://img.shields.io/badge/Miao--Yunzai-V3-orange.svg)](https://github.com/yoimiya-kokomi/Miao-Yunzai) [![TRSS-Yunzai](https://img.shields.io/badge/TRSS--Yunzai-V3-orange.svg)](https://github.com/TimeRainStarSky/Yunzai) [![miao-plugin](https://img.shields.io/badge/喵喵-面板-black?style=flat-square&logo=dependabot)](https://gitee.com/yoimiya-kokomi/miao-plugin) [![Group](https://img.shields.io/badge/群号-768216689-red?style=flat-square&logo=GroupMe&logoColor=white)](https://qun.qq.com/universal-share/share?ac=1&authKey=OhXBwpnRd2oyFNIbE%2BItRHYAGj8JpSiWFVBnb4tEz6lJzXxnRzQytnMaHSEWFE4z&busi_data=eyJncm91cENvZGUiOiI3NjgyMTY2ODkiLCJ0b2tlbiI6ImNsYzl2MFNBSGxkOWFJcDJ5YnpKam9BZFZXdkFOZ0MveVliZE1pU0VVbHNqQnZGdlYvSTRvcmpPbUs0UkpaL0kiLCJ1aW4iOiIzNTEzMDIxNDYifQ%3D%3D&data=fpHkTsCy-oCPE1bMwmeYvBxo2eENJc3ZtVqXxScjLvmMYyUBVtM1A1D-qP7cSB3avC-8Gs4dh7lNXSbcvZpUhA&svctype=4&tempid=h5_group_info)<br>
 
 </div>
+
+![访客数](https://count.getloli.com/get/@characterpic)
 
 ### 图库说明
 
