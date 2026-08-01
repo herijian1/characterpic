@@ -32,18 +32,18 @@
 使用github
 
 ```
-git clone https://github.com/herijian1/characterpic1.git ./plugins/miao-plugin/resources/profile/
+git clone --depth=1 https://github.com/herijian1/characterpic1.git ./plugins/miao-plugin/resources/profile/
 ```
 
 使用gitee
 ```
-git clone https://gitee.com/herijian/characterpic1.git ./plugins/miao-plugin/resources/profile/
+git clone --depth=1 https://gitee.com/herijian/characterpic1.git ./plugins/miao-plugin/resources/profile/
 ```
 
 使用gitcode（更新慢）
 
 ```
-git clone https://gitcode.com/herijian/characterpic1.git ./plugins/miao-plugin/resources/profile/
+git clone --depth=1 https://gitcode.com/herijian/characterpic1.git ./plugins/miao-plugin/resources/profile/
 ```
 
 若克隆仓库失败，先删除miao-plugin/resources/profile目录下原有的normal-character文件夹
