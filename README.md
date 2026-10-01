@@ -78,6 +78,12 @@ rc rm -r plugins/miao-plugin/resources/profile/normal-character && cd plugins/mi
 rc cd plugins/miao-plugin/resources/profile && git pull
 ```
 
+ ### 常见问题
+
+Q：面板图库拉取更新后为什么有的角色查看面板时，面板图为空白的？
+
+A：具体原因暂不清楚，可以尝试删除面板图文件夹后重新克隆仓库解决.
+ 
  ### 手动安装方法（不方便更新）
 
 随便找个地方克隆图库 或 直接下载压缩包
